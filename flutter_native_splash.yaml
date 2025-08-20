@@ -1,0 +1,46 @@
+# This file is used to configure the Flutter Native Splash package.
+# For more information, visit: https://pub.dev/packages/flutter_native_splash
+
+# To generate the splash screen, run:
+#* dart run flutter_native_splash:create
+
+flutter_native_splash:
+  # Main background color (hex code or color name)
+  color: "#ffffff"
+  # Background color for dark mode
+  color_dark: "#222222"
+  # Path to main splash image (PNG recommended)
+  image: assets/images/app/splash/splash.png
+  image_dark: assets/images/app/splash/splash.png
+
+  branding: assets/images/app/splash/branding.png
+  branding_dark: assets/images/app/splash/branding.png
+
+  # Enable/disable splash for each platform
+  android: true
+  ios: true
+  web: false
+  # Hide status/navigation bars (fullscreen splash)
+  fullscreen: true
+  # Android-specific options
+  android_gravity: center # center, top, bottom, etc.
+  android_screen_orientation: portrait # portrait, landscape, sensor, etc.
+  # iOS-specific options
+  ios_content_mode: center # center, scaleAspectFill, scaleAspectFit, etc.
+  # Android 12+ specific options
+  android_12:
+    # Foreground image for Android 12 splash
+    image: assets/images/app/splash/splash.png
+    # Foreground image for Android 12 splash (dark mode)
+    image_dark: assets/images/app/splash/splash.png
+    
+    branding: assets/images/app/splash/branding_android.png
+    branding_dark: assets/images/app/splash/branding_android.png
+    # Background color for Android 12 icon
+    icon_background_color: "#ffffff"
+    # Background color for Android 12 icon (dark mode)
+    icon_background_color_dark: "#222222"
+    # Background color for Android 12 splash
+    color: "#ffffff"
+    # Background color for Android 12 splash (dark mode)
+    color_dark: "#222222"
