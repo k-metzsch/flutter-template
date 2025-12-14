@@ -4,13 +4,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../data/repositories/theme_repository.dart';
 
 class ThemeCubit extends Cubit<ThemeMode> {
-  final ThemeRepository _repository;
-
   ThemeCubit({required ThemeRepository repository})
     : _repository = repository,
       super(ThemeMode.system);
+  final ThemeRepository _repository;
 
-  /// Load persisted theme (call before runApp if you want app to start with correct theme)
   Future<void> load() async {
     final ThemeMode mode = await _repository.loadThemeMode();
     emit(mode);

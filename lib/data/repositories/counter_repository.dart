@@ -13,7 +13,9 @@ class CounterRepository {
 
   Future<DateTime?> getLastUpdated() async {
     final String? iso = PreferencesService.getString(_lastUpdatedKey);
-    if (iso == null) return null;
+    if (iso == null) {
+      return null;
+    }
     return DateTime.tryParse(iso);
   }
 

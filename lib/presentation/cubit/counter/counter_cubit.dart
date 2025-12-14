@@ -57,7 +57,7 @@ class CounterCubit extends Cubit<CounterState> {
   }
 
   Future<void> reset() async {
-    emit(state.copyWith(value: 0, lastUpdated: null));
+    emit(state.copyWith(value: 0));
     await _repository.clear();
   }
 }
